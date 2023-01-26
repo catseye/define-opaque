@@ -3,7 +3,7 @@ define-opaque
 
 This is an attempt to write a macro in R5RS Scheme that
 defines opaque data structures.  It is based on the third
-example given in Information Hiding in Scheme][].
+example given in [Information Hiding in Scheme][].
 
 It is not intended to be suitable for production use.  It
 is, however, intended to properly hide the details of the
