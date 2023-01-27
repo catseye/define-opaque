@@ -1,7 +1,7 @@
 (define-syntax opaque-op
   (syntax-rules ()
     ((opaque-op (name body) args)
-      (body args))))
+      (apply body args))))
 
 (define-syntax opaque-ops
   (syntax-rules ()
@@ -18,7 +18,7 @@
         (letrec
           (
             (make-name (lambda privs
-              (lambda (target args)
+              (lambda (target . args)
                 (opaque-ops target args ops))))
           )
           (make-name '()))))))
