@@ -1,7 +1,7 @@
 (define-syntax opaque-op
   (syntax-rules ()
-    ((opaque-op (name args body))
-      body)))
+    ((opaque-op (name body) args)
+      (body args))))
 
 (define-syntax opaque-ops
   (syntax-rules ()
@@ -9,7 +9,7 @@
       (begin
         (display "Undefined operation ") (display target) (newline) #f))
     ((opaque-ops target args (op rest ...))
-      (if (equal? (car 'op) target) (opaque-op op) (opaque-ops target args (rest ...))))))
+      (if (equal? (car 'op) target) (opaque-op op args) (opaque-ops target args (rest ...))))))
 
 (define-syntax define-opaque-lousy
   (syntax-rules ()

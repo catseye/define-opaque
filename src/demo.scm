@@ -1,15 +1,17 @@
+; usage: csi -q -b demo.scm
+
 (load "define-opaque.scm")
 
 (define-opaque-lousy stack make-stack (items)
   (
-    (push (item)
-      (make-stack (cons item items)))
-    (pop ()
+    (push (lambda (args)
+      (make-stack (cons (car args) items))))
+    (pop (lambda (args)
       (let* ( (item (car items))
               (new-items (cdr items)) )
         (cons
           (make-stack new-items)
-          item)))
+          item))))
   )
 )
 
@@ -18,7 +20,14 @@
     (result (stack 'pop '()))
     (stack2 (car result))
     (item   (cdr result))
+    (stack3 (stack2 'push '(9)))
   )
     (display item)
     (newline)
-    (stack2 'pop '()))))
+    (display (stack2 'pop '()))
+    (newline)
+    (display (stack3 'pop '()))
+    (newline)
+  )))
+
+(demo)
