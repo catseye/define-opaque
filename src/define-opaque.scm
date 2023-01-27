@@ -21,4 +21,4 @@
               (lambda (target args)
                 (opaque-ops target args ops))))
           )
-          (make-name '(1 2 3)))))))
+          (make-name '()))))))

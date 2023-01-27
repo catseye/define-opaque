@@ -22,4 +22,10 @@ the source code is intended to indicate this fact.
 If at some point it becomes more usable, I will update
 its name.
 
+### TODO
+
+- [ ] is more than one private field supported?
+- [ ] support supplying initial values for private fields
+
+
 [Information Hiding in Scheme]: https://github.com/cpressey/Information-Hiding-in-Scheme
