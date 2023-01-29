@@ -11,9 +11,9 @@
     ((opaque-ops target args (op rest ...))
       (if (equal? (car 'op) target) (opaque-op op args) (opaque-ops target args (rest ...))))))
 
-(define-syntax define-opaque-lousy
+(define-syntax define-opaque
   (syntax-rules ()
-    ((define-opaque-lousy name make-name privs ops)
+    ((define-opaque name make-name privs ops)
       (define name
         (letrec
           (

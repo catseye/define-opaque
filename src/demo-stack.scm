@@ -1,8 +1,8 @@
 ; usage: csi -q -b demo.scm
 
-(load "define-opaque.scm")
+(load "define-opaque-0.1.scm")
 
-(define-opaque-lousy stack make-stack (items)
+(define-opaque stack make-stack (items)
   (
     (new (lambda (new-items)
       (make-stack new-items)))
