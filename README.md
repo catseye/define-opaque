@@ -52,4 +52,4 @@ usage patterns.
 - [ ] is more than one private field supported?
 - [ ] support supplying initial values for private fields
 
-[Information Hiding in Scheme]: https://github.com/cpressey/Information-Hiding-in-Scheme
+[Information Hiding in Scheme]: https://codeberg.org/catseye/The-Dossier/src/branch/master/article/Information-Hiding-in-Scheme/
